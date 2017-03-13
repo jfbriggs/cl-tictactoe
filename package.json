@@ -4,7 +4,8 @@
   "description": "Command-line tic-tac-toe",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

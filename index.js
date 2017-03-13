@@ -1,4 +1,3 @@
-var board = require('./board');
 var prompt = require('prompt');
 
 prompt.start();
@@ -29,16 +28,18 @@ var beginTurn = function() {
   prompt.get(['Choose a space'], function(err, result) {
     var space = result['Choose a space'].toString();
     cells[space] = currentPlayer;
-
     players[currentPlayer].push(space);
 
+    var currentBoard = '=============\n| ' + cells['1'] + ' | ' + cells['2'] + ' | ' + cells['3'] + ' |\n=============\n| ' + cells['4'] + ' | ' + cells['5'] + ' | ' + cells['6'] + ' |\n=============\n| ' + cells['7'] + ' | ' + cells['8'] + ' | ' + cells['9'] + ' |\n=============';
+
     if (checkWin(currentPlayer)) {
-      console.log('=============\n| ' + cells['1'] + ' | ' + cells['2'] + ' | ' + cells['3'] + ' |\n=============\n| ' + cells['4'] + ' | ' + cells['5'] + ' | ' + cells['6'] + ' |\n=============\n| ' + cells['7'] + ' | ' + cells['8'] + ' | ' + cells['9'] + ' |\n=============');
+      console.log(currentBoard);
       console.log('Player ' + currentPlayer + ' wins!  Thanks for playing.');
       return;
     }
 
     if (players.X.length + players.O.length === 9) {
+      console.log(currentBoard);
       console.log('This game is a draw!  Thanks for playing!');
       return;
     }
