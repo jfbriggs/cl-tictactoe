@@ -71,7 +71,7 @@ var combos = [
 
 var checkWin = function(player) {
   // check a player's accumulated cells array to see if they have a winning combination
-  
+
   // if a player has placed at least 3 pieces
   if (players[player].length > 2) {
     // iterate through combos
@@ -80,9 +80,12 @@ var checkWin = function(player) {
       for (var j = 0; j < combos[i].length; j++) {
         if (!players[player].includes(combos[i][j])) {
           break;
+        } else {
+          if (j === 2) {
+            return true;
+          }
         }
       }
-      return true;
     }
     return false;
   }
