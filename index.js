@@ -22,7 +22,7 @@ var players = {
 var currentPlayer = 'X';
 
 var beginTurn = function() {
-  console.log('Player ' + currentPlayer + ', your turn.  Select a space (First row: 1-3, second row: 4-6, third row: 7-9).');
+  console.log('Player ' + currentPlayer + ', your turn.  Select a space (First row: 1-3, second row: 4-6, third row: 7-9).\n');
   console.log('=============\n| ' + cells['1'] + ' | ' + cells['2'] + ' | ' + cells['3'] + ' |\n=============\n| ' + cells['4'] + ' | ' + cells['5'] + ' | ' + cells['6'] + ' |\n=============\n| ' + cells['7'] + ' | ' + cells['8'] + ' | ' + cells['9'] + ' |\n=============');
 
   prompt.get(['Choose a space'], function(err, result) {
@@ -53,6 +53,8 @@ var beginTurn = function() {
   });
   
 };
+
+console.log('WELCOME TO TIC-TAC-TOE!  MAY THE BEST PLAYER WIN!\n');
 
 beginTurn();
 
@@ -91,3 +93,12 @@ var checkWin = function(player) {
     return false;
   }
 }
+
+module.exports = {
+  checkWin: checkWin,
+  beginTurn: beginTurn,
+  cells: cells,
+  players: players,
+  combos: combos,
+  currentPlayer: currentPlayer
+};
