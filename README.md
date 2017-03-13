@@ -2,7 +2,7 @@
 
 This is a basic command-line tic-tac-toe game.
 
-Simply install dependencies, and then run 'npm start' from the root folder.
+Simply install dependencies with `npm install`, and then run `npm start` from the root folder.
 
 Players alternate turns (one representing 'X', one 'O'), and select space numbers.
 Spaces are represented by number values (first row = 1-3, second row = 4-6, third row = 7-9).
