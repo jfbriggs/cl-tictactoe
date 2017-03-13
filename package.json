@@ -1,0 +1,24 @@
+{
+  "name": "cl-tictactoe",
+  "version": "1.0.0",
+  "description": "Command-line tic-tac-toe",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfbriggs/cl-tictactoe.git"
+  },
+  "keywords": [
+    "tic",
+    "tac",
+    "toe"
+  ],
+  "author": "James Briggs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfbriggs/cl-tictactoe/issues"
+  },
+  "homepage": "https://github.com/jfbriggs/cl-tictactoe#readme"
+}
