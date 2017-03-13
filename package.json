@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jfbriggs/cl-tictactoe/issues"
   },
-  "homepage": "https://github.com/jfbriggs/cl-tictactoe#readme"
+  "homepage": "https://github.com/jfbriggs/cl-tictactoe#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
 }
